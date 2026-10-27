@@ -1,0 +1,35 @@
+title: markbreitenbach.dev
+tagline: Operating notes on running engineering teams made of agents.
+description: >-
+  Thirty years of systems, architecture and management. Currently shipping a
+  product with an engineering team that is mostly agents, and writing down what
+  works, what did not, and what I had to change.
+url: "https://markbreitenbach.dev"
+baseurl: ""
+author:
+  name: Mark Breitenbach
+lang: en
+
+# Notes live in _posts and publish at /notes/<slug>/
+permalink: /notes/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .ruby-version
+  - .claude/
+  - .wrangler/
