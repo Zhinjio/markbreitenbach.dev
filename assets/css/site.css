@@ -43,7 +43,7 @@ body {
   min-height: 100vh;
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 19px;
+  font-size: 17px;
   line-height: 1.75;
   background-color: var(--ground);
   background-image: url('/assets/img/ground.webp');
@@ -104,7 +104,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
   width: 100%;
   max-width: var(--sheet-w);
   margin-top: 40px;
-  padding: 72px 60px 64px 72px;
+  padding: 65px 48px 64px 58px;
   background: var(--sheet);
   border: 1px solid var(--sheet-edge);
 }
@@ -154,7 +154,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
   font-weight: 400;
   color: var(--ink-strong);
 }
-.intro { margin: 22px 0 0; font-size: 18px; line-height: 1.65; color: var(--ink-soft); }
+.intro { margin: 22px 0 0; font-size: 16px; line-height: 1.65; color: var(--ink-soft); }
 
 .label {
   display: block;
@@ -228,10 +228,10 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
 }
 
 @media (max-width: 720px) {
-  body { font-size: 17px; }
+  body { font-size: 16px; }
   .masthead { padding: 20px 0; }
   .sections { gap: 20px; }
-  .sheet { margin-top: 24px; padding: 48px 24px 40px 36px; }
+  .sheet { margin-top: 24px; padding: 43px 19px 40px 29px; }
   .binding { left: 12px; }
   .lede { font-size: 32px; }
   .now { grid-template-columns: 1fr; gap: 8px; }
@@ -248,7 +248,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
   margin-top: 28px;
 }
 .colophon-list dt:first-child { margin-top: 0; }
-.colophon-list dd { margin: 8px 0 0; font-size: 17px; line-height: 1.7; color: var(--ink); }
+.colophon-list dd { margin: 8px 0 0; font-size: 15px; line-height: 1.7; color: var(--ink); }
 
 /* About page: the eras list ---------------------------------------------- */
 
@@ -264,7 +264,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
 .eras li {
   position: relative;
   padding-left: 48px;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.65;
   color: var(--ink);
 }
