@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+{% seo %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+</head>
+<body>
+<header class="masthead">
+  <a class="brand" href="{{ '/' | relative_url }}">
+    <span>{{ site.title }}</span>
+    <span class="cursor" aria-hidden="true"></span>
+  </a>
+  <nav class="sections" aria-label="Sections">
+    <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>notes</a>
+    <a href="{{ '/talks/' | relative_url }}"{% if page.url == '/talks/' %} aria-current="page"{% endif %}>talks</a>
+    <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>about</a>
+  </nav>
+</header>
+
+<main class="sheet">
+  <div class="binding" aria-hidden="true"></div>
+  {% if page.tabs %}
+  <nav class="tabs" aria-label="Index">
+    {% for tab in page.tabs %}
+    <a href="{{ tab.href | relative_url }}" class="tab {{ tab.kind | default: 'topic' }}" style="--tab: {{ tab.color | default: 'var(--tab-muted)' }}">{{ tab.label }}</a>
+    {% endfor %}
+  </nav>
+  {% endif %}
+  {{ content }}
+</main>
+
+<footer class="colophon">
+  <span>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} &middot; no tracking, no cookies</span>
+  <span class="links">
+    <a href="{{ '/feed.xml' | relative_url }}">rss</a>
+    <a href="{{ '/about/' | relative_url }}#contact">mail</a>
+    <a href="{{ '/colophon/' | relative_url }}">colophon</a>
+  </span>
+</footer>
+</body>
+</html>

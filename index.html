@@ -1,16 +1,18 @@
 ---
-layout: null
+layout: default
+title: Coming soon
+tabs:
+  - { label: "#agent-teams", href: "/", color: "var(--tab-ice)" }
+  - { label: "#review", href: "/", color: "var(--tab-amber)" }
+  - { label: "#governance", href: "/", color: "var(--tab-sage)" }
+  - { label: "#forges", href: "/", color: "var(--tab-clay)" }
+  - { label: "talks", href: "/talks/", kind: section }
+  - { label: "about", href: "/about/", kind: section }
 ---
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ site.title }}</title>
-{% seo title=false %}
-</head>
-<body>
-<p>{{ site.title }}</p>
-<p>{{ site.tagline }}</p>
-</body>
-</html>
+<p class="lede">{{ site.tagline }}</p>
+<p class="intro">{{ site.description }}</p>
+
+<hr class="rule">
+
+<span class="label">// coming soon</span>
+<p class="intro" style="margin-top: 16px">The first notes are being written. The site, the feed and the tabs will fill in as they land.</p>
