@@ -249,3 +249,33 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
 }
 .colophon-list dt:first-child { margin-top: 0; }
 .colophon-list dd { margin: 8px 0 0; font-size: 17px; line-height: 1.7; color: var(--ink); }
+
+/* About page: the eras list ---------------------------------------------- */
+
+.eras {
+  margin: 24px 0 0;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: era;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.eras li {
+  position: relative;
+  padding-left: 48px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.eras li::before {
+  counter-increment: era;
+  content: counter(era, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 3px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+}
+.eras strong { font-weight: 500; color: var(--ink-strong); }

@@ -13,3 +13,6 @@ vendor/
 .wrangler/
 .DS_Store
 Thumbs.db
+
+# Working notes, never published
+TOPICS.md
