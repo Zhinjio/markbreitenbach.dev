@@ -1,0 +1,18 @@
+# The edge tabs: a curated subset of tags, not all of them. Four topics plus about.
+# Colors are CSS variables from site.css. Keep this list short; retire tabs rarely,
+# and leave a redirect in _redirects when a tag page goes away.
+- label: "#validation"
+  href: /tags/validation/
+  color: var(--tab-ice)
+- label: "#governance"
+  href: /tags/governance/
+  color: var(--tab-amber)
+- label: "#workflow"
+  href: /tags/workflow/
+  color: var(--tab-sage)
+- label: "#faq"
+  href: /tags/faq/
+  color: var(--tab-clay)
+- label: about
+  href: /about/
+  kind: section
