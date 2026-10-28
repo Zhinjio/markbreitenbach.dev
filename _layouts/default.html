@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/assets/img/favicon-64.png' | relative_url }}" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
@@ -19,20 +22,19 @@
   </a>
   <nav class="sections" aria-label="Sections">
     <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>notes</a>
-    <a href="{{ '/talks/' | relative_url }}"{% if page.url == '/talks/' %} aria-current="page"{% endif %}>talks</a>
     <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>about</a>
   </nav>
 </header>
 
 <main class="sheet">
   <div class="binding" aria-hidden="true"></div>
-  {% if page.tabs %}
+  {% unless page.notabs %}
   <nav class="tabs" aria-label="Index">
-    {% for tab in page.tabs %}
+    {% for tab in site.data.tabs %}
     <a href="{{ tab.href | relative_url }}" class="tab {{ tab.kind | default: 'topic' }}" style="--tab: {{ tab.color | default: 'var(--tab-muted)' }}">{{ tab.label }}</a>
     {% endfor %}
   </nav>
-  {% endif %}
+  {% endunless %}
   {{ content }}
 </main>
 
