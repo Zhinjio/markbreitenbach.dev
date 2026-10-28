@@ -149,7 +149,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
 .lede {
   margin: 0;
   font-family: var(--serif);
-  font-size: 44px;
+  font-size: 38px;
   line-height: 1.2;
   font-weight: 400;
   color: var(--ink-strong);
@@ -233,7 +233,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
   .sections { gap: 20px; }
   .sheet { margin-top: 24px; padding: 43px 19px 40px 29px; }
   .binding { left: 12px; }
-  .lede { font-size: 32px; }
+  .lede { font-size: 30px; }
   .now { grid-template-columns: 1fr; gap: 8px; }
 }
 
@@ -296,7 +296,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
 .meta .tags a { color: var(--accent); }
 .entry-title {
   font-family: var(--serif);
-  font-size: 27px;
+  font-size: 25px;
   font-weight: 500;
   line-height: 1.25;
   color: var(--ink-strong);
@@ -311,7 +311,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
 .note-title {
   margin: 0;
   font-family: var(--serif);
-  font-size: 44px;
+  font-size: 38px;
   line-height: 1.15;
   font-weight: 500;
   color: var(--ink-strong);
@@ -420,6 +420,6 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
 .note-updated { margin-top: 2em; }
 
 @media (max-width: 720px) {
-  .note-title { font-size: 32px; }
-  .entry-title { font-size: 23px; }
+  .note-title { font-size: 30px; }
+  .entry-title { font-size: 22px; }
 }
