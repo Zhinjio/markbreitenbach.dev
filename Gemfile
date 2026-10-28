@@ -14,3 +14,6 @@ gem "webrick", "~> 1.8"
 
 # Windows has no system time zone database for Ruby to read.
 gem "tzinfo-data", platforms: [:mingw, :x64_mingw, :mswin]
+
+# Windows: file-change notifications for `jekyll serve` instead of polling.
+gem "wdm", ">= 0.1.0", platforms: [:mingw, :x64_mingw, :mswin]
