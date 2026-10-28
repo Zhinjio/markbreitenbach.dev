@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% assign posts = site.tags[page.tag] %}
+<span class="label">// #{{ page.tag }}</span>
+{% if page.description %}<p class="intro" style="margin-top: 16px">{{ page.description }}</p>{% endif %}
+
+{% if posts and posts.size > 0 %}
+<div class="entries" style="margin-top: 40px">
+{% for post in posts %}
+  <div class="entry">
+    <div class="meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      {% if post.tags.size > 0 %}<span class="tags">{% for tag in post.tags %}<a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}">#{{ tag }}</a>{% endfor %}</span>{% endif %}
+    </div>
+    <a class="entry-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.summary %}<span class="entry-summary">{{ post.summary }}</span>{% endif %}
+  </div>
+{% endfor %}
+</div>
+{% else %}
+<p class="intro" style="margin-top: 40px">Nothing filed here yet.</p>
+{% endif %}

@@ -19,7 +19,7 @@ apply here as everywhere; these are the ones specific to this repo.
 
 ## Design
 
-- The look is settled: graphite sheet on a dark stone ground, amber accent, Newsreader
+- The look is settled: graphite sheet on a dark stone ground, amber accent, Bitter
   for titles, Inter for prose, IBM Plex Mono for furniture, edge tabs as the index.
   Colors, fonts and sizes live ONLY as CSS variables at the top of `assets/css/site.css`;
   never hard-code a color in markup.
