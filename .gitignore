@@ -16,3 +16,6 @@ Thumbs.db
 
 # Working notes, never published
 TOPICS.md
+
+# Drafts stay local until they move to _posts
+_drafts/

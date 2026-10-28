@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{% assign words = content | strip_html | number_of_words %}
+{% assign minutes = words | divided_by: 200 | plus: 1 %}
+<article class="note">
+  <header class="note-head">
+    <span class="label">// note</span>
+    <h1 class="note-title">{{ page.title }}</h1>
+    <div class="meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+      <span>{{ minutes }} min</span>
+      {% if page.tags.size > 0 %}<span class="tags">{% for tag in page.tags %}<a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}">#{{ tag }}</a>{% endfor %}</span>{% endif %}
+    </div>
+    {% if page.summary %}<p class="summary">{{ page.summary }}</p>{% endif %}
+  </header>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <p class="signoff">Peace.<br><span class="sig">/mb</span></p>
+
+  {% if page.sources and page.sources.size > 0 %}
+  <footer class="sources">
+    <span class="label">// sources</span>
+    <ol>
+      {% for src in page.sources %}
+      <li id="src-{{ forloop.index }}">
+        {% if src.url %}<a href="{{ src.url }}">{{ src.title }}</a>{% else %}{{ src.title }}{% endif %}{% if src.by %}, {{ src.by }}{% endif %}{% if src.date %}, {{ src.date }}{% endif %}{% if src.accessed %}. Accessed {{ src.accessed }}.{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </footer>
+  {% endif %}
+
+  {% if page.updated %}
+  <p class="meta note-updated">updated {{ page.updated | date: "%Y-%m-%d" }}</p>
+  {% endif %}
+</article>
