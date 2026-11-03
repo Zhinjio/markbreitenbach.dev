@@ -32,6 +32,8 @@ feed:
 exclude:
   - _talks-stub.html.disabled
   - README.md
+  - CLAUDE.md
+  - TOPICS.md
   - Gemfile
   - Gemfile.lock
   - .ruby-version

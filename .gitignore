@@ -14,8 +14,9 @@ vendor/
 .DS_Store
 Thumbs.db
 
-# Working notes, never published
+# Working notes and agent instructions, never published
 TOPICS.md
+/CLAUDE.md
 
 # Drafts stay local until they move to _posts
 _drafts/
