@@ -382,7 +382,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
 
 /* kramdown footnotes */
 .prose sup { font-family: var(--mono); font-size: 11px; line-height: 0; }
-.prose sup a { color: var(--accent); }
+.prose sup a, .prose .reversefootnote { color: var(--accent); text-decoration: none; }
 .prose .footnotes {
   margin-top: 3em;
   padding-top: 1.5em;
