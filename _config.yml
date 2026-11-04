@@ -9,9 +9,15 @@ baseurl: ""
 author:
   name: Mark Breitenbach
 
-# Default social card (jekyll-seo-tag); a note may override with image: in front matter
-image: /assets/img/card.jpg
 lang: en
+
+# Default social card. jekyll-seo-tag reads image: only from a page, never from the site,
+# so it goes in as a front matter default; a note may override with image: of its own.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/card.jpg
 
 # Notes live in _posts and publish at /notes/<slug>/
 permalink: /notes/:title/
