@@ -156,6 +156,13 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
 }
 .intro { margin: 22px 0 0; font-size: 16px; line-height: 1.65; color: var(--ink-soft); }
 
+/* Profile links on the about page. LinkedIn allows its logo only in its own artwork (blue,
+   black or white), so both logos stay near-white and the link text carries the accent. */
+.social { margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 8px 24px; font-family: var(--mono); font-size: 14px; }
+.social a { display: inline-flex; align-items: center; gap: 8px; }
+.social svg, .social img { height: 16px; width: auto; flex: none; }
+.social svg { width: 16px; fill: var(--ink-strong); }
+
 .label {
   display: block;
   font-family: var(--mono);
