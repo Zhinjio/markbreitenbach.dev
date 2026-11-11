@@ -30,7 +30,7 @@ That's the other half, and the answer is different. The framework you use, Claud
 
 That's a limited model, and not an efficient one. But if you're in that early, skeptical phase, it is exactly the right place to start, because it lets you see every action it takes, and that's how the trust gets built.
 
-Eventually, and this is where I am now, you switch to an automatic mode: you grant it full permissions in a single directory, where it can read, write, and run the commands you've given it access to, and you define a set of rules it must operate by. One of mine, for example, is that it never runs a delete across a range of files. There is no such thing as `rm -rf *` in my shop; it simply won't do it, because I've forbidden it in the standing rules it must follow. How you write those rules, and how much the quality of that guidance matters, is a whole post of its own, and I'll get to it. But it's a big part of what establishing trust means in practice.
+Eventually, and this is where I am now, you switch to an automatic mode: you grant it full permissions in a single directory, where it can read, write, and run the commands you've given it access to, and you define a set of rules it must operate by. One of mine, for example, is that it never runs a delete across a range of files. There is no such thing as `rm -rf *` in my shop; it simply won't do it, because I've forbidden it in the standing rules it must follow. How you write those rules, and how much the quality of that guidance matters, is a whole note of its own, and I'll get to it. But it's a big part of what establishing trust means in practice.
 
 ## The junior engineer
 
