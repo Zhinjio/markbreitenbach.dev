@@ -22,6 +22,9 @@ defaults:
 # Notes live in _posts and publish at /notes/<slug>/
 permalink: /notes/:title/
 
+# Home page pagination (_plugins/home_pagination.rb): notes per page; later pages at /page/<n>/
+home_per_page: 5
+
 markdown: kramdown
 kramdown:
   input: GFM
@@ -45,3 +48,4 @@ exclude:
   - .ruby-version
   - .claude/
   - .wrangler/
+  - tools/

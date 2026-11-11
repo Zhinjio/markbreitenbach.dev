@@ -1,0 +1,162 @@
+# Glossary entries, rendered by glossary.html in alphabetical order.
+#   term:       as it should appear
+#   id:         the anchor, /glossary/#<id>; keep it stable once published
+#   definition: one or two sentences, condensed from the note that explains it
+#   see:        the notes that explain the term (title and url)
+#   cites:      sources behind the definition, by note and source number; each links to
+#               that entry in the note's source list (/notes/<slug>/#src-<n>)
+#   sources:    optional outside sources, only for a claim no note covers
+#               (title, by, url, archive, accessed), as in a note's front matter
+
+- term: auto memory
+  id: auto-memory
+  definition: >-
+    What Claude Code saves on its own as you work, such as your corrections and
+    preferences. It's kept separate from the rules you write in CLAUDE.md.
+  see:
+    - title: "Definitions, Part 1"
+      url: /notes/definitions-part-1/
+    - title: "Definitions, Part 3"
+      url: /notes/definitions-part-3/
+  cites:
+    - note: /notes/definitions-part-3/
+      n: 1
+
+- term: CLAUDE.md
+  id: claude-md
+  definition: >-
+    The Markdown file of rules Claude Code loads at the start of every session. A global
+    one applies everywhere; a project one applies only to sessions inside that project.
+  see:
+    - title: "Definitions, Part 1"
+      url: /notes/definitions-part-1/
+  cites:
+    - note: /notes/definitions-part-1/
+      n: 6
+
+- term: compaction
+  id: compaction
+  definition: >-
+    What the agent does when the context window gets close to full: it replaces the
+    conversation so far with a summary. That frees up room, but the detail is gone.
+  see:
+    - title: "Definitions, Part 2"
+      url: /notes/definitions-part-2/
+  cites:
+    - note: /notes/definitions-part-2/
+      n: 3
+
+- term: context window
+  id: context-window
+  definition: >-
+    Everything the model can see at once in a single conversation: your prompts, its
+    replies and its thinking, plus your rules and the descriptions of its tools. Up to one
+    million tokens on most current Claude models.
+  see:
+    - title: "Definitions, Part 1"
+      url: /notes/definitions-part-1/
+  cites:
+    - note: /notes/definitions-part-1/
+      n: 4
+    - note: /notes/definitions-part-1/
+      n: 5
+
+- term: handoff file
+  id: handoff-file
+  definition: >-
+    A file the agent writes before compaction or a new session, holding the state of the
+    current work, so the next session can pick up where the last one left off.
+  see:
+    - title: "Definitions, Part 2"
+      url: /notes/definitions-part-2/
+  cites:
+    - note: /notes/definitions-part-2/
+      n: 2
+
+- term: memory
+  id: memory
+  definition: >-
+    What an agent keeps beyond a single conversation, usually as files it searches when it
+    needs them, often with an index that points to the details. As of November 2026,
+    this is an area of active research, and new approaches to managing agent memory are
+    appearing all the time.
+  see:
+    - title: "Definitions, Part 3"
+      url: /notes/definitions-part-3/
+  cites:
+    - note: /notes/definitions-part-3/
+      n: 1
+    - note: /notes/definitions-part-3/
+      n: 9
+
+- term: rules
+  id: rules
+  definition: >-
+    Instructions that load into the context window and shape how the agent behaves. They
+    can apply everywhere, to one project, or to one machine.
+  see:
+    - title: "Definitions, Part 1"
+      url: /notes/definitions-part-1/
+  cites:
+    - note: /notes/definitions-part-1/
+      n: 6
+
+- term: session
+  id: session
+  definition: >-
+    One conversation with an agent, from start to finish.
+  see:
+    - title: "Definitions, Part 1"
+      url: /notes/definitions-part-1/
+    - title: "Definitions, Part 4"
+      url: /notes/definitions-part-4/
+
+- term: subagent
+  id: subagent
+  definition: >-
+    A helper agent that a session starts and hands a piece of the work to. Each has its own
+    context window, but all of them draw on the same usage limits.
+  see:
+    - title: "Definitions, Part 4"
+      url: /notes/definitions-part-4/
+
+- term: token
+  id: token
+  definition: >-
+    The unit a model reads, writes and counts. Often a piece of a word: about 3.5 to 4
+    English characters on average, depending on the vendor and the model.
+  see:
+    - title: "Definitions, Part 1"
+      url: /notes/definitions-part-1/
+  cites:
+    - note: /notes/definitions-part-1/
+      n: 1
+    - note: /notes/definitions-part-1/
+      n: 2
+    - note: /notes/definitions-part-1/
+      n: 3
+
+- term: usage credits
+  id: usage-credits
+  definition: >-
+    Paid credit that keeps you working after you hit a plan's usage limit, if you switch
+    it on.
+  see:
+    - title: "Definitions, Part 4"
+      url: /notes/definitions-part-4/
+  cites:
+    - note: /notes/definitions-part-4/
+      n: 1
+
+- term: usage limits
+  id: usage-limits
+  definition: >-
+    How much of your plan you can use before you have to stop. Most Claude plans have one
+    that resets every five hours and a weekly one; when you hit one, you wait for the reset
+    or pay with usage credits.
+  see:
+    - title: "Definitions, Part 4"
+      url: /notes/definitions-part-4/
+  cites:
+    - note: /notes/definitions-part-4/
+      n: 1

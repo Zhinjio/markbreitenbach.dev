@@ -19,7 +19,7 @@ layout: default
     {{ content }}
   </div>
 
-  <p class="signoff">Peace.<br><span class="sig">/mb</span></p>
+  {% unless page.signoff == false %}<p class="signoff">Peace.<br><span class="sig">/mb</span></p>{% endunless %}
 
   {% if page.sources and page.sources.size > 0 %}
   <footer class="sources">
@@ -27,7 +27,8 @@ layout: default
     <ol>
       {% for src in page.sources %}
       <li id="src-{{ forloop.index }}">
-        {% if src.url %}<a href="{{ src.url }}">{{ src.title }}</a>{% else %}{{ src.title }}{% endif %}{% if src.by %}, {{ src.by }}{% endif %}{% if src.date %}, {{ src.date }}{% endif %}{% if src.accessed %}. Accessed {{ src.accessed }}.{% endif %}
+        {% if src.status == "dead" %}{% if src.archive %}<a href="{{ src.archive }}">{{ src.title }}</a>{% else %}{{ src.title }}{% endif %}{% elsif src.url %}<a href="{{ src.url }}">{{ src.title }}</a>{% else %}{{ src.title }}{% endif %}{% if src.by %}, {{ src.by }}{% endif %}{% if src.date %}, {{ src.date }}{% endif %}{% if src.accessed %}. Accessed {{ src.accessed }}.{% endif %}
+        {% if src.status == "dead" %}{% if src.archive %} <span class="src-note">Archived; the original is no longer available.</span>{% else %} <span class="src-note">No longer available.</span>{% endif %}{% elsif src.archive %} <a class="src-note" href="{{ src.archive }}">Archived copy</a>.{% endif %}
       </li>
       {% endfor %}
     </ol>

@@ -8,6 +8,7 @@ sources:
   - title: "DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding & Linux (Lex Fridman Podcast #501), segment 8:44 to 10:15"
     by: Lex Fridman, with David Heinemeier Hansson
     url: https://www.youtube.com/watch?v=NYFGCESmikA&t=524
+    archive: https://web.archive.org/web/20261111110422/https://www.youtube.com/watch?v=NYFGCESmikA&t=524
     date: 2026-08-26
     accessed: 2026-10-28
 ---

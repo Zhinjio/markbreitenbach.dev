@@ -256,6 +256,8 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
 }
 .colophon-list dt:first-child { margin-top: 0; }
 .colophon-list dd { margin: 8px 0 0; font-size: 15px; line-height: 1.7; color: var(--ink); }
+.glossary-list dt { scroll-margin-top: 24px; }
+.glossary-see { display: block; margin-top: 4px; font-family: var(--mono); font-size: 13px; color: var(--ink-soft); }
 
 /* About page: the eras list ---------------------------------------------- */
 
@@ -311,6 +313,25 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
 .entry-title:hover { color: var(--ink-strong); }
 .entry-summary { font-family: var(--serif); font-style: italic; font-size: 18px; line-height: 1.5; color: var(--ink-soft); }
 .more { display: inline-block; margin-top: 36px; font-family: var(--mono); font-size: 14px; color: var(--ink-faint); }
+
+/* All-notes page: a compact index, one line per note: date, title, tags. */
+.notes-index { list-style: none; margin: 24px 0 0; padding: 0; max-width: 660px; }
+.notes-index li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; padding: 9px 0; border-bottom: 1px solid var(--sheet-edge); }
+.notes-index time { font-family: var(--mono); font-size: 13px; color: var(--ink-faint); flex: none; }
+.notes-index .title { font-size: 15px; color: var(--ink-strong); flex: 1 1 auto; }
+.notes-index .tags { font-family: var(--mono); font-size: 13px; display: flex; gap: 10px; }
+.notes-index .tags a { color: var(--accent); }
+
+/* Home page pager: newer on the left, position and the all-notes link in the middle,
+   older on the right. The side slots stay in place when empty. */
+.pager { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px 16px; max-width: 660px; margin-top: 44px; font-family: var(--mono); font-size: 14px; color: var(--ink-faint); }
+.pager .newer, .pager .older { flex: 1 1 0; }
+.pager .older { text-align: right; }
+.pager .where { flex: none; }
+.pager a { white-space: nowrap; }
+@media (max-width: 720px) {
+  .pager .where { order: 3; flex-basis: 100%; }
+}
 
 /* Note (article) page ---------------------------------------------------- */
 
@@ -378,7 +399,12 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
 .prose a:hover { text-decoration-style: solid; }
 .prose strong { font-weight: 500; color: var(--ink-strong); }
 .prose em { font-style: italic; }
-.prose img { max-width: 100%; height: auto; }
+.prose img { max-width: 100%; height: auto; border: 1px solid var(--binding); border-radius: 6px; }
+/* a narrow image the prose wraps around: ![alt](src){: .inset} */
+.prose img.inset { float: right; max-width: 45%; margin: 0.35em 0 1em 1.5em; }
+@media (max-width: 720px) {
+  .prose img.inset { float: none; max-width: 100%; margin: 0; }
+}
 
 /* kramdown footnotes */
 .prose sup { font-family: var(--mono); font-size: 11px; line-height: 0; }
@@ -390,15 +416,19 @@ a:hover { color: var(--accent-hover); text-decoration: underline; text-underline
   font-size: 15px;
   color: var(--ink-soft);
 }
-.prose .footnotes ol { padding-left: 1.4em; }
+.prose .footnotes ol { margin-top: 16px; padding-left: 1.4em; }
 .prose .footnotes p { margin: 0; }
 .prose .reversefootnote { font-family: var(--mono); margin-left: 6px; }
+
+/* previous / next links between the notes of a series */
+.prose .series-nav { font-family: var(--mono); font-size: 13px; }
 
 .signoff { margin: 2.5em 0 0; font-family: var(--serif); font-size: 19px; line-height: 1.5; color: var(--ink-strong); }
 .signoff .sig { font-family: var(--mono); font-size: 13px; color: var(--accent); }
 
 /* sources bibliography */
 .sources { margin-top: 3em; padding-top: 1.5em; border-top: 1px solid var(--sheet-edge); }
+.sources .src-note { font-family: var(--mono); font-size: 13px; }
 .sources ol {
   margin: 16px 0 0;
   padding-left: 0;
