@@ -20,3 +20,6 @@ TOPICS.md
 
 # Drafts stay local until they move to _posts
 _drafts/
+
+# Raw dictation copies and draft images, kept local after a note publishes
+_working/
